@@ -1,0 +1,397 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+.nav{
+    height: 55px;
+    width: 100vw;
+    background-image: linear-gradient(to right, white, black, white);
+    margin-top: 0;
+}
+.navlist{
+    margin-top: 0;
+    list-style-type: none;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.navlist li a{
+    padding-block-start: 11px;
+    font-size: large;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: black;
+    text-shadow:2px 2px 3px white;
+}
+.background-video{
+    position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+video {
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 200%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    object-fit: cover;
+  }
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    text-shadow: 5px 2px 2px black;
+    text-transform: uppercase;
+    z-index: 1;
+}
+.hover{
+    height: 500%;
+    width: 50%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    box-shadow: 0 4px 6px black;
+    transition: box-shadow 0.3s ease;
+}
+.hover:hover{
+    box-shadow: 0 6px 10px grey;
+}
+button>a{
+    text-decoration: none;
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 5px 2px 2px black;
+    color: white;
+    font-size: large;
+    padding: 10px;
+}
+.box {
+    top: 20%;
+    width: 35%;
+    height: 40%;
+    position: relative;
+    border: 2px solid #ccc;
+  }
+.movingborder{
+    position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  border: 3px solid transparent;
+  animation: moveBorder 2s infinite alternate;
+}
+@keyframes moveBorder {
+    0% {
+      border-top-color: black;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+    }
+    25% {
+      border-top-color: transparent;
+      border-right-color: black;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+    }
+    50% {
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color:black;
+      border-left-color: transparent;
+    }
+    75% {
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color:black;
+    }
+    100% {
+      border-top-color: black;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+    }
+  }
+
+
+  .section {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    top: 55%;
+    width: 100vw;
+}
+
+
+.section:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+#about {
+    background-image: url('http://content.bikeroar.com/system/content/000/422/590/original/what_is_a_womens_specific_bike.jpg?1520544481');
+     background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#community {
+    background-image: url('https://www.liveabout.com/thmb/m9T45qk3PisxR3LwbbQ8f9hjrLI=/5616x3744/filters:no_upscale():max_bytes(150000):strip_icc()/young-woman-ice-skater-skating-on-outdoor-ice-rink-526882559-5989b4d0054ad900112539c8.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#purchase {
+  background-image: url('https://cdn.lifehack.org/wp-content/uploads/2015/04/Gaming-console.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#sm {
+  background-image: url('https://i.redd.it/ux7f15g5hc741.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#cu {
+  background-image: url('https://wallpaperaccess.com/full/49358.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: "Protest Revolution", sans-serif;
+  backdrop-filter: blur(5px) grayscale(50%);;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+select
+{
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+select:hover,
+button:hover {
+  border-color: #999;
+}
+
+.button {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+.community-section {
+  top: 20%;
+  background-color: white;
+  padding: 50px 0;
+}
+
+.container1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.community-section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.community-section p {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.community-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.community-member {
+  text-align: center;
+}
+
+.community-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.community-member h3 {
+  margin-bottom: 5px;
+}
+
+.community-member p {
+  color: #777;
+}
+
+.social-media-section {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.social-media-section h2 {
+  margin-bottom: 20px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+}
+
+.social-link {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  color: #333;
+  border-radius: 50%;
+  line-height: 40px;
+  margin: 0 10px;
+  font-size: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.social-link:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.twitter {
+  background-color: #1da1f2;
+}
+
+.instagram {
+  background-color: #e4405f;
+}
+
+.youtube {
+  background-color: #ff0000;
+}
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
+.container2 {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+#container2 {
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 2px white;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+.contact-form button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
